@@ -3,9 +3,9 @@ h1{
     cursor: pointer ;
     font-family: 'Indie Flower', cursive;
 }
-body{
-    background-image:url(back.jpeg);
-    background-size: cover ;
+head{
+    background-image: url(/images/back.jpeg);
+    background-size : cover ;
 }
 
 body{
