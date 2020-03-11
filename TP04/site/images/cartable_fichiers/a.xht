@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="fr">
+  <head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src chrome:; object-src 'none'" />
+    <title>Connexion bloquée : problème de sécurité potentiel</title>
+    <link rel="stylesheet" href="chrome://browser/skin/aboutNetError.css" type="text/css" media="all" />
+    <!-- If the location of the favicon is changed here, the FAVICON_ERRORPAGE_URL symbol in
+         toolkit/components/places/src/nsFaviconService.h should be updated. -->
+    <link rel="icon" id="favicon" href="chrome://global/skin/icons/warning.svg" />
+    <link rel="localization" href="browser/aboutCertError.ftl" />
+    <link rel="localization" href="browser/nsserrors.ftl" />
+    <link rel="localization" href="branding/brand.ftl" />
+  </head>
+
+  <body dir="ltr" class="certerror" code="MOZILLA_PKIX_ERROR_SELF_SIGNED_CERT">
+    <!-- ERROR ITEM CONTAINER (removed during loading to avoid bug 39098) -->
+    <div id="errorContainer">
+      <div id="errorPageTitlesContainer">
+        <span id="ept_nssBadCert">Attention : risque probable de sécurité</span>
+        <span id="ept_nssBadCert_sts">Connexion bloquée : problème de sécurité potentiel</span>
+        <span id="ept_captivePortal">Se connecter au réseau</span>
+        <span id="ept_dnsNotFound">Adresse introuvable</span>
+        <span id="ept_malformedURI">Adresse invalide</span>
+        <span id="ept_blockedByPolicy">Page bloquée</span>
+      </div>
+      <div id="errorTitlesContainer">
+        <h1 id="et_generic">La requête ne peut aboutir</h1>
+        <h1 id="et_captivePortal">Se connecter au réseau</h1>
+        <h1 id="et_dnsNotFound">Hum, nous ne parvenons pas à trouver ce site.</h1>
+        <h1 id="et_fileNotFound">Fichier introuvable</h1>
+        <h1 id="et_fileAccessDenied">L’accès au fichier a été refusé</h1>
+        <h1 id="et_malformedURI">Hum, cette adresse ne semble pas valide.</h1>
+        <h1 id="et_unknownProtocolFound">L’adresse n’a pas été reconnue</h1>
+        <h1 id="et_connectionFailure">La connexion a échoué</h1>
+        <h1 id="et_netTimeout">Le délai d’attente est dépassé</h1>
+        <h1 id="et_redirectLoop">La page n’est pas redirigée correctement</h1>
+        <h1 id="et_unknownSocketType">Réponse inattendue du serveur</h1>
+        <h1 id="et_netReset">La connexion a été réinitialisée</h1>
+        <h1 id="et_notCached">Le document a expiré</h1>
+        <h1 id="et_netOffline">Mode hors connexion</h1>
+        <h1 id="et_netInterrupt">La connexion a été interrompue</h1>
+        <h1 id="et_deniedPortAccess">Cette adresse est interdite</h1>
+        <h1 id="et_proxyResolveFailure">Le serveur proxy est introuvable</h1>
+        <h1 id="et_proxyConnectFailure">La connexion a été refusée par le serveur proxy</h1>
+        <h1 id="et_contentEncodingError">Erreur d’encodage de contenu</h1>
+        <h1 id="et_unsafeContentType">Type de fichier non sûr</h1>
+        <h1 id="et_nssFailure2">Échec de la connexion sécurisée</h1>
+        <h1 id="et_nssBadCert">Attention : risque probable de sécurité</h1>
+        <h1 id="et_nssBadCert_sts">Connexion bloquée : problème de sécurité potentiel</h1>
+        <h1 id="et_cspBlocked">Bloqué par une stratégie de sécurité de contenu</h1>
+        <h1 id="et_xfoBlocked">Bloqué par la politique X-Frame-Options</h1>
+        <h1 id="et_remoteXUL">XUL distant</h1>
+        <h1 id="et_corruptedContentErrorv2">Erreur due à un contenu corrompu</h1>
+        <h1 id="et_sslv3Used">Impossible d’établir une connexion sécurisée</h1>
+        <h1 id="et_inadequateSecurityError">La connexion n’est pas sécurisée</h1>
+        <h1 id="et_blockedByPolicy">Page bloquée</h1>
+        <h1 id="et_mitm">Un logiciel empêche Firefox de se connecter de façon sécurisée à ce site</h1>
+        <h1 id="et_clockSkewError">L’heure de votre ordinateur est incorrecte</h1>
+        <h1 id="et_networkProtocolError">Erreur de protocole réseau</h1>
+      </div>
+      <div id="errorDescriptionsContainer">
+        <div id="ed_generic">
+<p>Pour une raison inconnue, Firefox ne peut pas charger cette page.</p>
+</div>
+        <div id="ed_captivePortal">
+<p>Ce réseau nécessite que vous vous connectiez à un compte pour utiliser Internet.</p>
+</div>
+        <div id="ed_dnsNotFound"><strong>Si l’adresse est correcte, voici trois autres choses que vous pouvez essayer de faire :</strong>
+<ul>
+  <li>Réessayer ultérieurement.</li>
+  <li>Vérifier votre connexion au réseau.</li>
+  <li>Si vous êtes connecté au travers d’un pare-feu, vérifier que Firefox a la permission d’accéder au Web.</li>
+</ul></div>
+        <div id="ed_fileNotFound">
+<ul>
+  <li>Vérifiez la syntaxe du nom de fichier (dont le respect des minuscules/majuscules) ;</li>
+  <li>Vérifiez si le fichier n’a pas été déplacé, renommé ou supprimé.</li>
+</ul>
+</div>
+        <div id="ed_fileAccessDenied"><ul><li>Il a peut-être été supprimé, déplacé ou les permissions associées au fichier ne permettent pas d’y accéder.</li></ul></div>
+        <div id="ed_malformedURI"></div>
+        <div id="ed_unknownProtocolFound">
+<ul>
+  <li>Il est peut-être nécessaire d’installer une autre application pour ouvrir ce type d’adresse.</li>
+</ul>
+</div>
+        <div id="ed_connectionFailure">
+<ul>
+  <li>Le site est peut-être temporairement indisponible ou surchargé. Réessayez plus
+    tard ;</li>
+  <li>Si vous n’arrivez à naviguer sur aucun site, vérifiez la connexion
+    au réseau de votre ordinateur ;</li>
+  <li>Si votre ordinateur ou votre réseau est protégé par un pare-feu ou un proxy,
+    assurez-vous que Firefox est autorisé à accéder au Web.</li>
+</ul>
+</div>
+        <div id="ed_netTimeout">
+<ul>
+  <li>Le site est peut-être temporairement indisponible ou surchargé. Réessayez plus
+    tard ;</li>
+  <li>Si vous n’arrivez à naviguer sur aucun site, vérifiez la connexion
+    au réseau de votre ordinateur ;</li>
+  <li>Si votre ordinateur ou votre réseau est protégé par un pare-feu ou un proxy,
+    assurez-vous que Firefox est autorisé à accéder au Web.</li>
+</ul>
+</div>
+        <div id="ed_redirectLoop">
+<ul>
+  <li>La cause de ce problème peut être la désactivation ou le refus
+    des cookies.</li>
+</ul>
+</div>
+        <div id="ed_unknownSocketType">
+<ul>
+  <li>Vérifiez que le gestionnaire de sécurité personnelle (PSM) est installé sur
+    votre système.</li>
+  <li>Ceci peut être dû à une configuration inhabituelle du serveur.</li>
+</ul>
+</div>
+        <div id="ed_netReset">
+<ul>
+  <li>Le site est peut-être temporairement indisponible ou surchargé. Réessayez plus
+    tard ;</li>
+  <li>Si vous n’arrivez à naviguer sur aucun site, vérifiez la connexion
+    au réseau de votre ordinateur ;</li>
+  <li>Si votre ordinateur ou votre réseau est protégé par un pare-feu ou un proxy,
+    assurez-vous que Firefox est autorisé à accéder au Web.</li>
+</ul>
+</div>
+        <div id="ed_notCached"><p>Le document demandé n’est plus disponible dans le cache de Firefox.</p><ul><li>Par mesure de sécurité, Firefox ne redemande pas automatiquement de documents sensibles.</li><li>Cliquez sur Réessayer pour redemander ce document depuis le site web.</li></ul></div>
+        <div id="ed_netOffline">
+<ul>
+  <li>Cliquez sur le bouton « Réessayer » pour revenir en mode connecté et recharger la page.</li>
+</ul>
+</div>
+        <div id="ed_netInterrupt">
+<ul>
+  <li>Le site est peut-être temporairement indisponible ou surchargé. Réessayez plus
+    tard ;</li>
+  <li>Si vous n’arrivez à naviguer sur aucun site, vérifiez la connexion
+    au réseau de votre ordinateur ;</li>
+  <li>Si votre ordinateur ou votre réseau est protégé par un pare-feu ou un proxy,
+    assurez-vous que Firefox est autorisé à accéder au Web.</li>
+</ul>
+</div>
+        <div id="ed_deniedPortAccess"></div>
+        <div id="ed_proxyResolveFailure">
+<ul>
+  <li>Vérifiez que les paramètres du proxy sont corrects ;</li>
+  <li>Vérifiez que la connexion réseau de votre ordinateur fonctionne ;</li>
+  <li>Si votre ordinateur ou votre réseau est protégé par un pare-feu ou
+ un proxy, assurez-vous que Firefox a l’autorisation d’accéder au Web.</li>
+</ul>
+</div>
+        <div id="ed_proxyConnectFailure">
+<ul>
+  <li>Vérifiez que les paramètres du proxy sont corrects ;</li>
+  <li>Contactez votre administrateur réseau pour vous assurer que le serveur proxy
+    fonctionne.</li>
+</ul>
+</div>
+        <div id="ed_contentEncodingError"><ul><li>Veuillez contacter les propriétaires du site web pour les informer de ce problème.</li></ul></div>
+        <div id="ed_unsafeContentType"><ul><li>Veuillez contacter les propriétaires du site web pour les informer de ce problème.</li></ul></div>
+        <div id="ed_nssFailure2">
+<ul>
+  <li>La page que vous essayez de consulter ne peut pas être affichée car l’authenticité des données reçues ne peut être vérifiée.</li>
+  <li>Veuillez contacter les propriétaires du site web pour les informer de ce problème.</li>
+</ul>
+</div>
+        <div id="ed_nssBadCert">Firefox a détecté une menace de sécurité potentielle et n’a pas poursuivi vers <span class="hostname">aax-eu.amazon-adsystem.com</span>.
+ Si vous accédez à ce site, des attaquants pourraient dérober des 
+informations comme vos mots de passe, courriels, ou données de carte 
+bancaire.</div>
+        <div id="ed_nssBadCert_sts">Firefox a détecté une menace potentielle de sécurité et a interrompu le chargement de <span class="hostname">aax-eu.amazon-adsystem.com</span>, car ce site web nécessite une connexion sécurisée.</div>
+        <div id="ed_nssBadCert_SEC_ERROR_EXPIRED_CERTIFICATE">Firefox a détecté un problème et a interrompu le chargement de <span class="hostname">aax-eu.amazon-adsystem.com</span>. Soit le site est mal configuré, soit l’horloge de votre ordinateur est réglée à la mauvaise heure.</div>
+        <div id="ed_mitm"><span class="hostname">aax-eu.amazon-adsystem.com</span> est probablement un site fiable, mais une connexion sécurisée n’a pas pu être établie. Ce problème est causé par <span class="mitm-name"></span>, qui est un logiciel installé soit sur votre ordinateur, soit sur votre réseau.</div>
+        <div id="ed_cspBlocked"><p>Firefox a empêché le chargement de cette page de cette manière car sa stratégie de sécurité de contenu ne le permet pas.</p></div>
+        <div id="ed_xfoBlocked"><p>Firefox a empêché le chargement de cette page dans ce contexte car la politique X-Frame-Options de la page ne l’autorise pas.</p></div>
+        <div id="ed_remoteXUL"><p><ul><li>Veuillez contacter les propriétaires du site web pour les informer de ce problème.</li></ul></p></div>
+        <div id="ed_corruptedContentErrorv2"><p>La page que vous essayez de voir ne peut pas être affichée car une erreur dans la transmission de données a été détectée.</p><ul><li>Veuillez contacter les propriétaires du site web pour les informer de ce problème.</li></ul></div>
+        <div id="ed_sslv3Used">Informations avancées : SSL_ERROR_UNSUPPORTED_VERSION</div>
+        <div id="ed_inadequateSecurityError"><p><span class="hostname">aax-eu.amazon-adsystem.com</span>
+ fait appel à des technologies de sécurisation obsolètes et vulnérables 
+aux attaques. Un attaquant pourrait facilement révéler des informations 
+que vous pensiez être sécurisées. L’administrateur du site web devra 
+d’abord corriger le serveur avant que vous puissiez visiter le site.</p><p>Code d’erreur : NS_ERROR_NET_INADEQUATE_SECURITY</p></div>
+        <div id="ed_blockedByPolicy"></div>
+        <div id="ed_clockSkewError">Votre ordinateur pense qu’il est <span id="wrongSystemTime_systemDate1"></span>, ce qui empêche Firefox de se connecter de façon sécurisée. Pour visiter <span class="hostname">aax-eu.amazon-adsystem.com</span>,
+ mettez à jour l’horloge de votre ordinateur dans vos paramètres système
+ afin qu’elle soit réglée sur la date, l’heure et le fuseau horaire qui 
+conviennent, puis actualisez <span class="hostname">aax-eu.amazon-adsystem.com</span>.</div>
+        <div id="ed_networkProtocolError"><p>La page à laquelle vous essayez d’accéder ne peut pas être affichée, car une erreur du protocole réseau a été détectée.</p><ul><li>Veuillez contacter les propriétaires du site web pour les informer de ce problème.</li></ul></div>
+      </div>
+      <div id="errorDescriptions2Container">
+          <div id="ed2_nssBadCert_SEC_ERROR_EXPIRED_CERTIFICATE">Le 
+certificat du site a probablement expiré, ce qui empêche Firefox 
+d’établir une connexion sécurisée. Si vous visitez ce site, des 
+attaquants pourraient dérober des informations telles que vos mots de 
+passe, vos adresses électroniques ou vos informations de carte bancaire.</div>
+          <div id="ed2_nssBadCert_SEC_ERROR_EXPIRED_CERTIFICATE_sts">Le certificat du site a probablement expiré, ce qui empêche Firefox d’établir une connexion sécurisée.</div>
+      </div>
+      <div id="whatCanYouDoAboutItTitleContainer">
+        <div id="edd_nssBadCert"><strong>Que pouvez-vous faire ?</strong></div>
+      </div>
+      <div id="whatCanYouDoAboutItContainer">
+        <div id="es_nssBadCert_SEC_ERROR_UNKNOWN_ISSUER"><p>Le problème vient probablement du site web, donc vous ne pouvez pas y remédier.</p><p>Si
+ vous naviguez sur un réseau d’entreprise ou si vous utilisez un 
+antivirus, vous pouvez contacter les équipes d’assistance pour obtenir 
+de l’aide. Vous pouvez également signaler le problème aux personnes qui 
+administrent le site web.</p>
+</div>
+        <div id="es_nssBadCert_SEC_ERROR_EXPIRED_CERTIFICATE"><p>L’horloge de votre ordinateur est réglée sur <span id="wrongSystemTime_systemDate2"></span>.
+ Assurez-vous que la date, l’heure et le fuseau horaire soient corrects 
+dans les paramètres système de votre ordinateur, puis actualisez <span class="hostname">aax-eu.amazon-adsystem.com</span>.</p>
+<p>Si votre horloge est déjà bien réglée, le site web est probablement 
+mal configuré et il n’y a rien que vous puissiez faire pour résoudre le 
+problème. Essayez éventuellement de le signaler à l’administrateur du 
+site.</p></div>
+        <div id="es_nssBadCert_SEC_ERROR_EXPIRED_ISSUER_CERTIFICATE"><p>L’horloge de votre ordinateur est réglée sur <span id="wrongSystemTime_systemDate2"></span>.
+ Assurez-vous que la date, l’heure et le fuseau horaire soient corrects 
+dans les paramètres système de votre ordinateur, puis actualisez <span class="hostname">aax-eu.amazon-adsystem.com</span>.</p>
+<p>Si votre horloge est déjà bien réglée, le site web est probablement 
+mal configuré et il n’y a rien que vous puissiez faire pour résoudre le 
+problème. Essayez éventuellement de le signaler à l’administrateur du 
+site.</p></div>
+        <div id="es_nssBadCert_MOZILLA_PKIX_ERROR_NOT_YET_VALID_CERTIFICATE"><p>L’horloge de votre ordinateur est réglée sur <span id="wrongSystemTime_systemDate2"></span>.
+ Assurez-vous que la date, l’heure et le fuseau horaire soient corrects 
+dans les paramètres système de votre ordinateur, puis actualisez <span class="hostname">aax-eu.amazon-adsystem.com</span>.</p>
+<p>Si votre horloge est déjà bien réglée, le site web est probablement 
+mal configuré et il n’y a rien que vous puissiez faire pour résoudre le 
+problème. Essayez éventuellement de le signaler à l’administrateur du 
+site.</p></div>
+        <div id="es_nssBadCert_MOZILLA_PKIX_ERROR_NOT_YET_VALID_ISSUER_CERTIFICATE"><p>L’horloge de votre ordinateur est réglée sur <span id="wrongSystemTime_systemDate2"></span>.
+ Assurez-vous que la date, l’heure et le fuseau horaire soient corrects 
+dans les paramètres système de votre ordinateur, puis actualisez <span class="hostname">aax-eu.amazon-adsystem.com</span>.</p>
+<p>Si votre horloge est déjà bien réglée, le site web est probablement 
+mal configuré et il n’y a rien que vous puissiez faire pour résoudre le 
+problème. Essayez éventuellement de le signaler à l’administrateur du 
+site.</p></div>
+        <div id="es_nssBadCert_SSL_ERROR_BAD_CERT_DOMAIN"><p>Le problème
+ vient probablement du site web, vous ne pouvez donc pas y remédier. 
+Vous pouvez le signaler aux personnes qui administrent le site.</p></div>
+        <div id="es_nssBadCert_MOZILLA_PKIX_ERROR_MITM_DETECTED">
+          <ul>
+            <li>Si votre logiciel antivirus inclut une fonctionnalité 
+d’analyse des connexions chiffrées (parfois appelée « analyse web » ou 
+« analyse HTTPS »), vous pouvez désactiver cette fonctionnalité. Si cela
+ ne fonctionne pas, essayez de supprimer puis réinstaller votre logiciel
+ antivirus.</li>
+            <li>Si vous utilisez un réseau d’entreprise, vous pouvez contacter votre service informatique.</li>
+            <li id="mitmWhatCanYouDoAboutIt3">Si vous ne reconnaissez pas <span class="mitm-name"></span>, alors il pourrait s’agir d’une attaque et vous ne devriez pas accéder au site.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Stores an alternative text for when we don't want to add "Recommended" to the
+           return button. This is one of many l10n atrocities in this file and should be
+           removed when we finally switch to Fluent. -->
+      <span id="stsReturnButtonText">Retour</span>
+      <span id="stsMitmWhatCanYouDoAboutIt3">Si vous ne reconnaissez pas <span class="mitm-name"></span>, alors il pourrait s’agir d’une attaque et il n’est pas possible d’accéder au site.</span>
+    </div>
+
+    <!-- PAGE CONTAINER (for styling purposes only) -->
+    <div id="errorPageContainer" class="container">
+      <div id="text-container">
+        <!-- Error Title -->
+        <div class="title">
+          <h1 class="title-text">Connexion bloquée : problème de sécurité potentiel</h1>
+        </div>
+
+        <!-- LONG CONTENT (the section most likely to require scrolling) -->
+        <div id="errorLongContent">
+
+          <!-- Short Description -->
+          <div id="errorShortDesc">
+            <p id="errorShortDescText">Firefox a détecté une menace potentielle de sécurité et a interrompu le chargement de <span xmlns="http://www.w3.org/1999/xhtml" class="hostname">aax-eu.amazon-adsystem.com</span>, car ce site web nécessite une connexion sécurisée.</p>
+          </div>
+
+          <div id="errorShortDesc2">
+              <p id="errorShortDescText2"></p>
+          </div>
+
+          <div id="errorWhatToDoTitle">
+              <p id="errorWhatToDoTitleText"></p>
+          </div>
+
+          <div id="errorWhatToDo">
+              <p id="badStsCertExplanation" hidden="true"><span class="hostname">aax-eu.amazon-adsystem.com</span>
+ a recours à une stratégie de sécurité HTTP Strict Transport Security 
+(HSTS), une connexion sécurisée est obligatoire pour y accéder. Vous ne 
+pouvez pas ajouter d’exception pour visiter ce site.</p>
+              <p id="errorWhatToDoText"></p>
+          </div>
+
+          <div id="errorWhatToDo2">
+              <p id="errorWhatToDoText2"></p>
+              <p id="badStsCertExplanation" hidden="true"><span class="hostname">aax-eu.amazon-adsystem.com</span>
+ a recours à une stratégie de sécurité HTTP Strict Transport Security 
+(HSTS), une connexion sécurisée est obligatoire pour y accéder. Vous ne 
+pouvez pas ajouter d’exception pour visiter ce site.</p>
+          </div>
+
+          <!-- Long Description (Note: See netError.dtd for used XHTML tags) -->
+          <div id="errorLongDesc"></div>
+
+          <div id="learnMoreContainer" style="display: block;">
+            <p><a id="learnMoreLink" target="new" href="https://support.mozilla.org/1/firefox/73.0.1/WINNT/fr/security-error">En savoir plus…</a></p>
+          </div>
+        </div>
+
+        <!-- UI to temporarily re-enable TLS 1.0 and 1.1.
+             This should be removed after March 2020, see bug 1579285.  -->
+        <div id="enableTls10Container" class="button-container">
+          <p>Ce site web pourrait ne pas prendre en charge le protocole 
+TLS 1.2, qui est la version minimale prise en charge par Firefox. 
+L’activation de TLS 1.0 et TLS 1.1 pourrait permettre d’achever la 
+connexion.</p>
+          <p>TLS 1.0 et TLS 1.1 seront définitivement désactivés dans une prochaine version.</p>
+          <button id="enableTls10Button" class="primary">Activer TLS 1.0 et 1.1</button>
+        </div>
+
+        <!-- UI for option to report certificate errors to Mozilla. Removed on
+             init for other error types .-->
+        <div id="prefChangeContainer" class="button-container">
+          <p>Ce problème semble être provoqué par vos paramètres de sécurité réseau. Voulez-vous restaurer les paramètres par défaut ?</p>
+          <button id="prefResetButton" class="primary">Restaurer les paramètres par défaut</button>
+        </div>
+
+        <div id="certErrorAndCaptivePortalButtonContainer" class="button-container">
+          <button id="returnButton" class="primary">Retour (recommandé)</button>
+          <button id="openPortalLoginPageButton" class="primary">Ouvrir la page de connexion du réseau</button>
+          <button class="primary try-again">Réessayer</button>
+          <button id="advancedButton">Avancé…</button>
+        </div>
+      </div>
+
+      <div id="netErrorButtonContainer" class="button-container">
+        <button class="primary try-again">Réessayer</button>
+      </div>
+
+      <div id="advancedPanelContainer">
+        <div id="badCertAdvancedPanel" class="advanced-panel">
+          <p id="badCertTechnicalInfo"><label data-l10n-id="cert-error-domain-mismatch" data-l10n-args="{&quot;hostname&quot;:&quot;aax-eu.amazon-adsystem.com&quot;}">Les sites web justifient leur identité par des certificats. Firefox ne fait pas confiance à ce site, car il utilise un certificat qui n’est pas valide pour aax-eu.amazon-adsystem.com.</label>
+ 
+<label data-l10n-id="cert-error-code-prefix-link" data-l10n-args="{&quot;error&quot;:&quot;MOZILLA_PKIX_ERROR_SELF_SIGNED_CERT&quot;}">Code d’erreur : <a id="errorCode" data-l10n-name="error-code-link">MOZILLA_PKIX_ERROR_SELF_SIGNED_CERT</a></label>
+ 
+</p>
+          <a id="viewCertificate" href="javascript:void(0)">Afficher le certificat</a>
+          <div id="advancedPanelButtonContainer" class="button-container">
+            <button id="advancedPanelReturnButton" class="primary">Retour (recommandé)</button>
+            <button class="primary try-again">Réessayer</button>
+            <div class="exceptionDialogButtonContainer">
+              <button id="exceptionDialogButton" hidden="true">Accepter le risque et poursuivre</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="certificateErrorReporting">
+            <p class="toggle-container-with-text">
+                <input type="checkbox" id="automaticallyReportInFuture" role="checkbox" />
+                <label for="automaticallyReportInFuture">Signaler les erreurs similaires pour aider Mozilla à identifier et bloquer les sites malveillants</label>
+            </p>
+        </div>
+
+        <div id="certificateErrorDebugInformation">
+          <button id="copyToClipboardTop">Copier le texte dans le presse-papiers</button>
+          <div id="certificateErrorText">https://aax-eu.amazon-adsystem.com/s/iu3?d=amazon.fr&amp;slot=navFooter&amp;a2=010194c0fc162108df73a6f14e3aaff4273d67c3481af711f9c63468eea6bf902577&amp;old_oo=0&amp;ts=1582734659963&amp;s=AXZbAJqKrzWUZVz4KJFAjX2ydMo9c9r8n58SjMsICOqw&amp;cb=1582734659963
+
+Le certificat n’est pas sûr car il est auto-signé.
+
+HTTP Strict Transport Security : false
+HTTP Public Key Pinning : false
+
+Chaîne de certificat :
+
+-----BEGIN CERTIFICATE-----
+MIIElTCCA32gAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCQ0Ex
+ETAPBgNVBAgUCFNUX0ROU0JMMREwDwYDVQQHFAhMTl9ETlNCTDERMA8GA1UEChQI
+T05fRE5TQkwxETAPBgNVBAsUCE9VX0ROU0JMMREwDwYDVQQDFAhDTl9ETlNCTDEg
+MB4GCSqGSIb3DQEJARYRZG5zYmxAZXhhbXBsZS5jb20wHhcNMTgxMjE5MTUzMTEy
+WhcNMjgxMjE2MTUzMTEyWjCBjjELMAkGA1UEBhMCQ0ExETAPBgNVBAgUCFNUX0RO
+U0JMMREwDwYDVQQHFAhMTl9ETlNCTDERMA8GA1UEChQIT05fRE5TQkwxETAPBgNV
+BAsUCE9VX0ROU0JMMREwDwYDVQQDFAhDTl9ETlNCTDEgMB4GCSqGSIb3DQEJARYR
+ZG5zYmxAZXhhbXBsZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQCwAkw0hyNGpnsojaplfr1DR3lL8TAa0UQOwvogeqSSBJhLIH1QYRmFaeFuiAn5
+ImDjczlGxdW5BOpQHH9AtvE72xVeYC7hR/ER3Xkb+7U+Yy1Lq58yvFzGoBVAPjHY
+jyYZeGQML+m4rPwVxXF8meany9qtJPmQnvcwMU2YsJGbnj9S9UiXcmJwg0KSnQnk
+uyaEwvOmIsVqMOtP9apcZUxqkQFdrVkGs4ZvN+nxKj7gqogjcrgA2DKa0ADlxtbg
+IB2WdHqNm2vBjBAC+ZIyWbzObVmpNcq0aSQP9NdAMhS2nqYVLA98j2lGvw0tYi1W
+zJjCX12IilFYx5lagPpI4RE5AgMBAAGjgfswgfgwHQYDVR0OBBYEFNlogxtayXMC
+3TUZYRejR2zW7aTAMIG7BgNVHSMEgbMwgbCAFNlogxtayXMC3TUZYRejR2zW7aTA
+oYGUpIGRMIGOMQswCQYDVQQGEwJDQTERMA8GA1UECBQIU1RfRE5TQkwxETAPBgNV
+BAcUCExOX0ROU0JMMREwDwYDVQQKFAhPTl9ETlNCTDERMA8GA1UECxQIT1VfRE5T
+QkwxETAPBgNVBAMUCENOX0ROU0JMMSAwHgYJKoZIhvcNAQkBFhFkbnNibEBleGFt
+cGxlLmNvbYIBADAMBgNVHRMEBTADAQH/MAsGA1UdDwQEAwIBBjANBgkqhkiG9w0B
+AQUFAAOCAQEABuykNtF+fk25iypnEO2b1NNXZLR06ZWjejT93pdpCh0gDQUKI7Ox
+/KDhg+8y4MJNVGQR8p60VG8t6QxosOjKIhM3l/6Fe4XwziQk/nKpMr0Sp8R+3Zbi
+Uh1HFIC+RhwUNa1WtW9jRHSt7yyzq8V+i41Lz3+Lv4Z43X20jMT/dtyLg2IbSp1e
+/kKp8JUxLA0kIzJPeFMexfhGzimxPcoLGx1nSrkMUK2Jsj74EGE9IFdu+NzqOQbp
+A9DB3kAJrjHgoTsB9x4xJDx+lppyXdw+oX3FMJOlEUQ5KPwzH22wFZrYuUDQkOSV
+1s9VUhNNXJzQWK1xqaOaVOPQNSgcF9Y3gA==
+-----END CERTIFICATE-----
+</div>
+          <button id="copyToClipboardBottom">Copier le texte dans le presse-papiers</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="chrome://browser/content/aboutNetError.js"></script>
+</html>
