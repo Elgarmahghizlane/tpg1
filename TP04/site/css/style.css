@@ -1,0 +1,35 @@
+h1{
+    color:black;
+    cursor: pointer ;
+    font-family: 'Indie Flower', cursive;
+    border:12px solid goldenrod;
+   
+}
+
+body{
+   color:black;
+    text-align:center;
+    cursor: pointer ;
+  letter-spacing: 3px;
+     
+}
+p{
+    list-style: gras;
+    display: inline-block;
+    border:10px solid black;
+    box-shadow: 4px 4px gray;
+    border-radius: 6px;
+    
+}
+
+    list-style : none;
+    display: inline-block;
+    border: 16px solid rgb(219, 132, 219);
+    box-shadow: 4px 4px;
+    border-radius: 6px;
+
+}
+
+
+
+
